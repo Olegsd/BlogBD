@@ -11,14 +11,20 @@ namespace BlogDbApp
         static void Main(string[] args)
         {
             var db = new BlogDbContext();
-            foreach (var p in db.Posts)
-            {
-                Console.WriteLine(p.ID + " " + p.Title);
-                foreach (var c in p.Comments)
+            var posts = db.Posts.Select(
+                p => new
                 {
-                    Console.WriteLine($"\t {c.ID} {c.Text}");
-                }
+                    ID =p.ID,
+                    PostTitle = p.Title,
+                    CommentsCount = p.Comments.Count(),
+                    TagsCount = p.Tags.Count(),
+                    AuthorName = p.User.FullName
+                });
+            foreach (var p in posts)
+            {
+                Console.WriteLine(p);
             }
+
         }
 
     }
