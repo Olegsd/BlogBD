@@ -1,3 +1,6 @@
-Progect Blog \n
-DB blog - SQL Server Data Base \n
-C# and Entity technologies \n
+Progect Blog
+
+DB blog - SQL Server Data Base
+
+C# and Entity technologies
+
