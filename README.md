@@ -1,6 +1,7 @@
-Progect Blog
+Project Blog
 
-DB blog - SQL Server Data Base
+DB "blog" - SQL Server
 
 C# and Entity technologies
 
+Visual Studio integrated GitHub synch
